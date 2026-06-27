@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    encyclopedia
+{% endblock %}
+
+{% block body %}
+    
+    <h5>Create a new page using Markup</h5> 
+    <form action="{% url 'encyclopedia:new_entry' %}" method="post">
+        {% csrf_token %}
+            {{form}}
+        <input type="submit" vaue = "Enter New Entry">
+    </form>
+{% endblock %}

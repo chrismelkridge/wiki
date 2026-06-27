@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    encyclopedia
+{% endblock %}
+
+{% block body %}
+    <h3>No exact match one of these might be useful</h3>
+
+    <ul>
+        {% for name in possible_entry %}
+            <li>
+            
+                <a href="wiki/{{name}}">{{name}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
