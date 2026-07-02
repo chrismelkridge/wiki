@@ -6,7 +6,7 @@
 
 {% block body %}
     
-    <h5>Create a new page using Markup</h5> 
+    <h5>Create a new page using Markdown</h5> 
     <form action="{% url 'encyclopedia:new_entry' %}" method="post">
         {% csrf_token %}
             {{form}}
